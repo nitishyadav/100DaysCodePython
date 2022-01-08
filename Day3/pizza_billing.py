@@ -12,50 +12,36 @@ pepperoni_ml =3
 pizza_s = 15
 pizza_m = 20
 pizza_l = 25
+price = 0
 if(size == "S"):
     if(add_pepperoni == "Y"):
-        if(extra_cheese == "Y"):
-            price = pizza_s + pepperoni_s + cheese
-            print(f"Your final bill is: ${price}.")
-        else:
-            price = pizza_s + pepperoni_s
-            print(f"Your final bill is: ${price}.")
-    elif(add_pepperoni == "N"):
-        if(extra_cheese == "Y"):
-            price = pizza_s + cheese
-            print(f"Your final bill is: ${price}.")
-        else:
-            price = pizza_s
-            print(f"Your final bill is: ${price}.")
+        price = pizza_s + pepperoni_s
+    else:
+        price = pizza_s
+
+    if(extra_cheese == "Y"):
+        price += 1
+
+    print(f"Your final bill is: ${price}.")
+
     
 elif(size == "M"):
     if(add_pepperoni == "Y"):
-        if(extra_cheese == "Y"):
-            price = pizza_m + pepperoni_ml + cheese
-            print(f"Your final bill is: ${price}.")
-        else:
-            price = pizza_m + pepperoni_ml
-            print(f"Your final bill is: ${price}.")
-    elif(add_pepperoni == "N"):
-        if(extra_cheese == "Y"):
-            price = pizza_m + cheese
-            print(f"Your final bill is: ${price}.")
-        else:
-            price = pizza_m
-            print(f"Your final bill is: ${price}.")
+        price = pizza_m + pepperoni_ml
+    else:
+        price = pizza_m 
+    if(extra_cheese == "Y"):
+        price += 1
+    
+    print(f"Your final bill is: ${price}.")
+    
 else:
     if(add_pepperoni == "Y"):
-        if(extra_cheese == "Y"):
-            price = pizza_l + pepperoni_ml + cheese
-            print(f"Your final bill is: ${price}.")
-        else:
-            price = pizza_l + pepperoni_ml
-            print(f"Your final bill is: ${price}.")
-    elif(add_pepperoni == "N"):
-        if(extra_cheese == "Y"):
-            price = pizza_l + cheese
-            print(f"Your final bill is: ${price}.")
-        else:
-            price = pizza_l
-            print(f"Your final bill is: ${price}.")
+        price = pizza_l + pepperoni_ml
+    else:
+        price = pizza_l 
+    if(extra_cheese == "Y"):
+        price += 1
+    
+    print(f"Your final bill is: ${price}.")
 
